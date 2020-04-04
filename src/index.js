@@ -8,27 +8,39 @@ const kasusMeninggalDom = document.getElementById("kasus-meninggal");
 const lastUpdateDom = document.getElementById("last-update");
 
 const fillKasusData = (
-  total = "----",
-  sembuh = "----",
-  meninggal = "----",
-  lastUpdate = "----"
+  data,
+  wilayah
 ) => {
-  kasusTotalDom.innerHTML = total;
-  kasusSembuhDom.innerHTML = sembuh;
-  kasusMeninggalDom.innerHTML = meninggal;
-  lastUpdateDom.innerHTML = lastUpdate;
+  const odp = data[`odp_${wilayah}`] || '---';
+  const pdp = data[`pdp_${wilayah}`] || '---';
+  const positif = data[`positif_${wilayah}`] || '---';
+  const mati = data[`mati_${wilayah}`] || '---';
+
+  if (wilayah !== 'nasional') {
+    document.getElementById(`kasus-odp-${wilayah}`).innerHTML = odp;
+    document.getElementById(`kasus-pdp-${wilayah}`).innerHTML = pdp;
+  }
+  document.getElementById(`kasus-positif-${wilayah}`).innerHTML = positif;
+  document.getElementById(`kasus-mati-${wilayah}`).innerHTML = mati;
 };
 
-fillKasusData();
+const fillDefaultKasusData = () => {
+  // default value
+  fillKasusData({},'kota');
+  fillKasusData({},'kab');
+  fillKasusData({},'jabar');
+  fillKasusData({},'nasional');
+}
+
 axios
-  .get("https://kawalcovid19.harippe.id/api/summary")
-  .then(res => res.data)
+  .get("https://api-covid-cirebon.now.sh")
+  .then(res => res.data[0])
   .then(data => {
-    fillKasusData(
-      data.confirmed.value,
-      data.recovered.value,
-      data.deaths.value,
-      new Date(data.metadata.lastUpdatedAt).toLocaleDateString()
-    );
+    fillKasusData(data,'kota');
+    fillKasusData(data,'kab');
+    fillKasusData(data,'jabar');
+    fillKasusData(data,'nasional');
+
+    document.getElementById(`last-update`).innerHTML = new Date(data.last_updated).toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
   })
-  .catch(err => fillKasusData());
+  .catch(err => fillDefaultKasusData());
