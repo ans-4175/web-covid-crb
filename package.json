@@ -1,9 +1,9 @@
 {
-  "name": "cegah-corona-efishery",
+  "name": "web-covid-crb",
   "version": "1.0.0",
-  "description": "landing page cegah corona efishery",
+  "description": "landing page update info covid cirebon",
   "main": "index.html",
-  "author": "engineering@efishery.com",
+  "author": "ans4175@efishery.com",
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html --open",

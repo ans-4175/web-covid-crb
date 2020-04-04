@@ -6,19 +6,19 @@ body {
 }
 
 :root {
-  --efishery: #d63447;
+  --primary-color: #d63447;
 }
 
 .logo {
   width: 100px;
 }
 
-.bg-efishery {
-  background-color: var(--efishery) !important;
+.bg-primary-color {
+  background-color: var(--primary-color) !important;
 }
 
-.text-efishery {
-  color: var(--efishery) !important;
+.text-primary-color {
+  color: var(--primary-color) !important;
 }
 
 ul {
