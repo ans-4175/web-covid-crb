@@ -1,0 +1,48 @@
+/* css */
+
+html,
+body {
+  font-family: "Asap", sans-serif;
+}
+
+:root {
+  --efishery: #d63447;
+}
+
+.logo {
+  width: 100px;
+}
+
+.bg-efishery {
+  background-color: var(--efishery) !important;
+}
+
+.text-efishery {
+  color: var(--efishery) !important;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+section {
+  padding: 20px 0;
+}

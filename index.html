@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kabar Corona | Cirebon</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-efishery sticky-top ">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Situs Resmi
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-efishery" href="https://efishery.com/products.html"
+                target="_blank">
+                Kabupaten Cirebon
+              </a>
+              <a class="dropdown-item text-efishery" href="https://efishery.com/product-efishery-fish-n-fresh.html"
+                target="_blank">
+                Kota Cirebon
+              </a>
+              <a class="dropdown-item text-efishery" href="#" target="_blank">
+                Provinsi Jawa Barat
+              </a>
+              <a class="dropdown-item text-efishery" href="#" target="_blank">
+                Nasional
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://efishery.com/career.html" target="_blank">KawalCovid19</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://efishery.com/contact.html" target="_blank">Pusat Covid Nasional</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://efishery.com/blog.html" target="_blank">Kontak Pengembang</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="">
+    <section class="bg-efishery text-white text-center">
+      <div class="container py-2">
+        <div class="row my-3">
+          <div class="col">
+            <h2>REKAPITULASI HARIAN</h2>
+            <h2>PENYEBARAN COVID-19 DI INDONESIA</h2>
+          </div>
+        </div>
+        <div class="row pt-1">
+          <div class="col">
+            <small>(Terakhir diperbaharui: <span id="last-update"></span>)</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white text-efishery text-center">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <h2>DATA KOTA - KAB CIREBON</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>Kota Cirebon</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-total' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Total Kasus</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-sembuh' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Sembuh</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-meninggal' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Meninggal</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>Kab Cirebon</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-total' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Total Kasus</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-sembuh' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Sembuh</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-meninggal' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Meninggal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-efishery text-white text-center">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <h2>DATA JABAR - NASIONAL</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>JAWA BARAT</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-total' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Total Kasus</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-sembuh' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Sembuh</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-meninggal' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Meninggal</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2>NASIONAL</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-total' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Total Kasus</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-sembuh' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Sembuh</p>
+          </div>
+          <div class="col-sm-12 col-md-4">
+            <div id='kasus-meninggal' class="display-4 font-weight-bolder"></div>
+            <p class="h5">Pasien Meninggal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white text-efishery text-center">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col">
+            <h2>DAFTAR KONTAK PENTING</h2>
+            <p>Jika Anda merasakan gejala/memiliki riwayat bepergian ke luar kota/ kontak dengan orang yang dicurigai positif/pdp/gejala coronavirus, segera klik kontak di bawah ini:</p>
+            <div class="row">
+              <div class="col-sm-12 col-md-3">
+                <div class="card card-body m-2">
+                  DARURAT KOTA CIREBON
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <div class="card card-body m-2">
+                  DARURAT KAB CIREBON
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <div class="card card-body m-2">
+                  DARURAT JAWA BARAT
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3">
+                <div class="card card-body m-2">
+                  DARURAT NASIONAL
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-6">
+                <div class="card card-body m-2">
+                  119
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="card card-body m-2">
+                  112
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center py-2 text-efishery">
+      © Copyright 2020 <a href="http://twitter.com/ans4175">@ans4175</a>. All rights reserved.
+    </footer>
+  </main>
+  <script src="./src/index.js"></script>
+</body>
+
+</html>
