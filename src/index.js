@@ -2,11 +2,6 @@ const axios = require("axios").default;
 require("bootstrap");
 require("typeface-asap");
 
-const kasusTotalDom = document.getElementById("kasus-total");
-const kasusSembuhDom = document.getElementById("kasus-sembuh");
-const kasusMeninggalDom = document.getElementById("kasus-meninggal");
-const lastUpdateDom = document.getElementById("last-update");
-
 const fillKasusData = (
   data,
   wilayah
@@ -32,6 +27,8 @@ const fillDefaultKasusData = () => {
   fillKasusData({},'nasional');
 }
 
+
+fillDefaultKasusData();
 axios
   .get("https://api-covid-cirebon.now.sh")
   .then(res => res.data[0])
